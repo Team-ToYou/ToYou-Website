@@ -59,3 +59,12 @@ button {
 	font-weight: 400;
 	font-style: normal;
 }
+
+:root {
+	--pink: #EB8B8B;
+	--font-pretendard: 'Pretendard', sans-serif;
+	--weight-light: 300;
+	--weight-medium: 500;
+	--weight-semibold: 600;
+	--weight-bold: 700;
+}
