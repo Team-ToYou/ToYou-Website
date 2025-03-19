@@ -1,17 +1,10 @@
 import styled from 'styled-components';
 import emailIcon from '../assets/email.svg';
 import instagramIcon from '../assets/instagram.svg';
-
-const FooterLine = styled.div`
-  height: 0.063rem;
-  width: 100%;
-  background-color: #d9d9d9;
-`;
+import { barContainer, Divider } from '../styles/sharedStyles';
 
 const FooterContainer = styled.div`
-  height: 5rem;
-  display: flex;
-  align-items: center;
+  ${barContainer}
   gap: 4.75rem;
   p {
     font-family: 'Pretendard';
@@ -25,7 +18,7 @@ const FooterContainer = styled.div`
   }
 `;
 
-const Button = styled.button`
+const LinkButton = styled.button`
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
@@ -38,18 +31,18 @@ const Button = styled.button`
 const Footer = () => {
   return (
     <>
-      <FooterLine />
+      <Divider />
       <FooterContainer>
         <p>COPYRIGHT TEAM TOYOU</p>
         <div className="btn-group">
-          <Button onClick={() => window.open('mailto:toyou1966@gmail.com')}>
+          <LinkButton onClick={() => window.open('mailto:toyou1966@gmail.com')}>
             <img src={emailIcon} alt="email icon" />
-          </Button>
-          <Button
+          </LinkButton>
+          <LinkButton
             onClick={() => window.open('https://www.instagram.com/toyou.app/')}
           >
             <img src={instagramIcon} alt="instagram icon" />
-          </Button>
+          </LinkButton>
         </div>
       </FooterContainer>
     </>
