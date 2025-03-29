@@ -24,7 +24,7 @@ const MenuContent = styled.div`
   cursor: pointer;
 `;
 
-const Overlay = ({ open }) => {
+const Menu = ({ open }) => {
   const nav = useNavigate();
 
   return (
@@ -46,4 +46,4 @@ const Overlay = ({ open }) => {
   );
 };
 
-export default Overlay;
+export default Menu;

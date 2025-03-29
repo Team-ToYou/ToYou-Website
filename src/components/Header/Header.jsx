@@ -5,7 +5,7 @@ import closeIcon from '@/assets/close.svg';
 import { barContainer, Divider } from '@/styles/sharedStyles';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Overlay from '@/components/Overlay';
+import Menu from '@/components/Menu/Menu';
 
 const HeaderContainer = styled.div`
   ${barContainer}
@@ -71,7 +71,7 @@ const Header = () => {
           </IconButton>
         </div>
       </HeaderContainer>
-      <Overlay open={isOpen} onClose={() => setIsOpen(false)} />
+      <Menu open={isOpen} onClose={() => setIsOpen(false)} />
       <Divider />
     </>
   );

@@ -1,9 +1,9 @@
 import '@/App.css';
 import { Routes, Route } from 'react-router-dom';
-import Home from '@/pages/Home';
+import Main from '@/pages/Main/MainPage';
 import TeamToYou from '@/pages/TeamToYou/TeamToYouPage';
 import History from '@/pages/History/HistoryPage';
-import Notfound from '@/pages/Notfound';
+import Notfound from '@/pages/Notfound/NotfoundPage';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <div className="content">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Main />} />
           <Route path="/teamtoyou" element={<TeamToYou />} />
           <Route path="/history" element={<History />} />
           <Route path="*" element={<Notfound />} />
