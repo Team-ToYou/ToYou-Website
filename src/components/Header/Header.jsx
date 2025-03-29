@@ -1,40 +1,11 @@
-import styled from 'styled-components';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import logo from '@/assets/logo.svg';
 import listIcon from '@/assets/list.svg';
 import closeIcon from '@/assets/close.svg';
-import { barContainer, Divider } from '@/styles/sharedStyles';
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import Menu from '@/components/Menu/Menu';
-
-const HeaderContainer = styled.div`
-  ${barContainer}
-  gap: 11.375rem;
-  .logo {
-    padding-left: 1.25rem;
-  }
-  .btn-group {
-    display: flex;
-    gap: 0.5rem;
-  }
-`;
-
-const DownloadButton = styled.button`
-  width: 5.188rem;
-  height: 1.875rem;
-  border-radius: 0.875rem;
-  background-color: var(--pink);
-  font-family: 'Pretendard';
-  font-weight: var(--weight-medium);
-  font-size: 0.75rem;
-`;
-
-const IconButton = styled.button`
-  background-color: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
+import { HeaderContainer, DownloadButton, IconButton } from './Header.style';
+import { Divider } from '@/styles/sharedStyles';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +16,6 @@ const Header = () => {
   };
 
   useEffect(() => {
-    // URL이 변경될 때마다 오버레이 닫기
     setIsOpen(false);
   }, [location.pathname]);
 
