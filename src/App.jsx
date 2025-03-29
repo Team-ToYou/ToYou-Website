@@ -1,11 +1,11 @@
-import './App.css';
+import '@/App.css';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import TeamToYou from './pages/TeamToYou';
-import History from './pages/History';
-import Notfound from './pages/Notfound';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Home from '@/pages/Home';
+import TeamToYou from '@/pages/TeamToYou/TeamToYouPage';
+import History from '@/pages/History/HistoryPage';
+import Notfound from '@/pages/Notfound';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 function App() {
   return (
