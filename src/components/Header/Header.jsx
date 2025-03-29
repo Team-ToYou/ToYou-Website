@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import logo from '../assets/logo.svg';
-import listIcon from '../assets/list.svg';
-import closeIcon from '../assets/close.svg';
-import { barContainer, Divider } from '../styles/sharedStyles';
+import logo from '@/assets/logo.svg';
+import listIcon from '@/assets/list.svg';
+import closeIcon from '@/assets/close.svg';
+import { barContainer, Divider } from '@/styles/sharedStyles';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Overlay from './Overlay';
+import Overlay from '@/components/Overlay';
 
 const HeaderContainer = styled.div`
   ${barContainer}

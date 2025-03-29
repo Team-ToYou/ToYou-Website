@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import emailIcon from '../assets/email.svg';
-import instagramIcon from '../assets/instagram.svg';
-import { barContainer, Divider } from '../styles/sharedStyles';
+import emailIcon from '@/assets/email.svg';
+import instagramIcon from '@/assets/instagram.svg';
+import { barContainer, Divider } from '@/styles/sharedStyles';
 
 const FooterContainer = styled.div`
   ${barContainer}
