@@ -1,12 +1,11 @@
 import emailIcon from '@/assets/email.svg';
 import instagramIcon from '@/assets/instagram.svg';
-import { FooterContainer, LinkButton } from './Footer.style';
-import { Divider } from '@/styles/sharedStyles';
+import { FooterDivider, FooterContainer, LinkButton } from './Footer.style';
 
 const Footer = () => {
   return (
     <>
-      <Divider />
+      <FooterDivider />
       <FooterContainer>
         <p>COPYRIGHT TEAM TOYOU</p>
         <div className="btn-group">

@@ -4,8 +4,12 @@ import logo from '@/assets/logo.svg';
 import listIcon from '@/assets/list.svg';
 import closeIcon from '@/assets/close.svg';
 import Menu from '@/components/Menu/Menu';
-import { HeaderContainer, DownloadButton, IconButton } from './Header.style';
-import { Divider } from '@/styles/sharedStyles';
+import {
+  HeaderDivider,
+  HeaderContainer,
+  DownloadButton,
+  IconButton,
+} from './Header.style';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,7 +64,7 @@ const Header = () => {
         </div>
       </HeaderContainer>
       <Menu open={isOpen} onClose={() => setIsOpen(false)} />
-      <Divider isOpen={isOpen} />
+      <HeaderDivider isOpen={isOpen} />
     </>
   );
 };

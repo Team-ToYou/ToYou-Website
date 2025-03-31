@@ -1,6 +1,16 @@
 import styled from 'styled-components';
 import { barContainer } from '@/styles/sharedStyles';
 
+export const HeaderDivider = styled.div`
+  position: fixed;
+  top: 5rem;
+  width: 393px;
+  height: 0.031rem;
+  background-color: #d9d9d9;
+  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  z-index: 1;
+`;
+
 export const HeaderContainer = styled.div`
   ${barContainer}
   position: fixed;

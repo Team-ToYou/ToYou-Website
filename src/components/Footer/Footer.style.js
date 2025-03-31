@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import { barContainer } from '@/styles/sharedStyles';
 
+export const FooterDivider = styled.div`
+  width: 393px;
+  height: 0.031rem;
+  background-color: #d9d9d9;
+  z-index: 1;
+`;
+
 export const FooterContainer = styled.div`
   ${barContainer}
   width: 393px;
