@@ -15,6 +15,7 @@ export const HeaderContainer = styled.div`
   }
   background: ${({ isOpen, isScrolled }) =>
     isOpen ? '#ffffff' : isScrolled ? '#ffffff' : 'transparent'};
+  z-index: 1;
 `;
 
 export const DownloadButton = styled.button`
