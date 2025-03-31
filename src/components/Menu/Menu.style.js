@@ -2,13 +2,14 @@ import styled from 'styled-components';
 
 export const OverlayMenu = styled.div`
   position: fixed;
-  top: 5.063rem;
+  top: 5rem;
   left: 50%;
   transform: translateX(-50%);
   width: 393px;
   height: 13.875rem;
   background-color: #ffffff;
   display: ${(props) => (props.open ? 'flex' : 'none')};
+  z-index: 1;
 `;
 
 export const MenuContent = styled.div`

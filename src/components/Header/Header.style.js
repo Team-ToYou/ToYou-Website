@@ -3,6 +3,8 @@ import { barContainer } from '@/styles/sharedStyles';
 
 export const HeaderContainer = styled.div`
   ${barContainer}
+  position: fixed;
+  width: 393px;
   gap: 11.375rem;
   .logo {
     padding-left: 1.25rem;
@@ -11,6 +13,8 @@ export const HeaderContainer = styled.div`
     display: flex;
     gap: 0.5rem;
   }
+  background: ${({ isOpen, isScrolled }) =>
+    isOpen ? '#ffffff' : isScrolled ? '#ffffff' : 'transparent'};
 `;
 
 export const DownloadButton = styled.button`

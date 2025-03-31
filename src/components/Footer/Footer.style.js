@@ -3,6 +3,7 @@ import { barContainer } from '@/styles/sharedStyles';
 
 export const FooterContainer = styled.div`
   ${barContainer}
+  width: 393px;
   gap: 4.75rem;
   p {
     font-family: 'Pretendard';

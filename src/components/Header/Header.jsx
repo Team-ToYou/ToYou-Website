@@ -9,11 +9,29 @@ import { Divider } from '@/styles/sharedStyles';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
   const toggleOverlay = () => {
     setIsOpen(!isOpen);
   };
+
+  const handleScroll = () => {
+    if (window.scrollY) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    setIsOpen(false);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     setIsOpen(false);
@@ -21,7 +39,7 @@ const Header = () => {
 
   return (
     <>
-      <HeaderContainer>
+      <HeaderContainer isScrolled={isScrolled} isOpen={isOpen}>
         <img className="logo" src={logo} alt="toyou logo" />
         <div className="btn-group">
           <DownloadButton
@@ -42,7 +60,7 @@ const Header = () => {
         </div>
       </HeaderContainer>
       <Menu open={isOpen} onClose={() => setIsOpen(false)} />
-      <Divider />
+      <Divider isOpen={isOpen} />
     </>
   );
 };
