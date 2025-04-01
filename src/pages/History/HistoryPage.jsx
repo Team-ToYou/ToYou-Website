@@ -1,3 +1,4 @@
+import usePageTitle from '../../hooks/usePageTitle';
 import Header from '../../components/Header/Header';
 import {
   Container,
@@ -60,6 +61,8 @@ const historyData = [
 ];
 
 const HistoryPage = () => {
+  usePageTitle('History');
+
   return (
     <Container>
       <Header />

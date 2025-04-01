@@ -1,3 +1,4 @@
+import usePageTitle from '../../hooks/usePageTitle';
 import Header from '../../components/Header/Header';
 import {
   Container,
@@ -14,6 +15,8 @@ import {
 } from './TeamToYou.style';
 
 const TeamToYouPage = () => {
+  usePageTitle('Team ToYou');
+
   return (
     <Container>
       <Header />
