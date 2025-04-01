@@ -62,5 +62,5 @@ export const Message = styled.div`
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  width: 18.75rem;
+  width: 20rem;
 `;
