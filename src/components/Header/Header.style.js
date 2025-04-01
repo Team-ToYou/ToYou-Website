@@ -18,6 +18,7 @@ export const HeaderContainer = styled.div`
   gap: 11.375rem;
   .logo {
     padding-left: 1.25rem;
+    cursor: pointer;
   }
   .btn-group {
     display: flex;

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import logo from '@/assets/logo.svg';
 import listIcon from '@/assets/list.svg';
 import closeIcon from '@/assets/close.svg';
@@ -15,6 +15,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const nav = useNavigate();
 
   const toggleOverlay = () => {
     setIsOpen(!isOpen);
@@ -44,7 +45,12 @@ const Header = () => {
   return (
     <>
       <HeaderContainer isScrolled={isScrolled} isOpen={isOpen}>
-        <img className="logo" src={logo} alt="toyou logo" />
+        <img
+          className="logo"
+          onClick={() => nav('/')}
+          src={logo}
+          alt="toyou logo"
+        />
         <div className="btn-group">
           <DownloadButton
             onClick={() =>
