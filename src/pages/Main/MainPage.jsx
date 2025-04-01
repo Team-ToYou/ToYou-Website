@@ -53,7 +53,6 @@ const MainPage = () => {
         <GuideImage src={MainImage2} alt="main image2" />
 
         <StepBadge top={864}>STEP ONE</StepBadge>
-
         <StepHeader top={894}>
           <StepLine />
           <StepTitle>감정우표 선택하기</StepTitle>
