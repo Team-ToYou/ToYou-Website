@@ -32,4 +32,7 @@ export const LinkButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+  &:hover {
+    background-color: #a6a6a6;
+  }
 `;

@@ -37,6 +37,30 @@ export const DownloadButton = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  &:hover {
+    animation-name: vibration;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes vibration {
+    0% {
+      transform: translateX(-50%) rotate(0deg);
+    }
+    25% {
+      transform: translateX(-50%) rotate(2deg);
+    }
+    50% {
+      transform: translateX(-50%) rotate(0deg);
+    }
+    75% {
+      transform: translateX(-50%) rotate(-2deg);
+    }
+    100% {
+      transform: translateX(-50%) rotate(0deg);
+    }
+  }
 `;
 
 export const MainImageWrapper = styled.img`
