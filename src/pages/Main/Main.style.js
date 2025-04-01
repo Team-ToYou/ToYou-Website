@@ -70,6 +70,26 @@ export const MainImageWrapper = styled.img`
   transform: translateX(-50%);
 `;
 
+export const GuideArrow = styled.img`
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  animation: bounce 2s infinite ease-in-out;
+  cursor: pointer;
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateX(-50%) translateY(0);
+      opacity: 0.7;
+    }
+    50% {
+      transform: translateX(-50%) translateY(15px);
+      opacity: 1;
+    }
+  }
+`;
+
 export const GuideContainer = styled.div`
   width: 393px;
   min-height: 177.0625rem;

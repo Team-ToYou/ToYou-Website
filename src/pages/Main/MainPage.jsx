@@ -3,6 +3,7 @@ import {
   CTASection,
   DownloadButton,
   MainImageWrapper,
+  GuideArrow,
   GuideContainer,
   GuideText,
   GuideImage,
@@ -16,6 +17,7 @@ import {
 import Header from '../../components/Header/Header';
 import MainImage from '@/assets/main.svg';
 import MainImage2 from '@/assets/main2.svg';
+import ArrowImage from '@/assets/arrow.svg';
 import Step1Image from '@/assets/step1.svg';
 import Step2Image from '@/assets/step2.svg';
 import Step3Image from '@/assets/step3.svg';
@@ -45,6 +47,7 @@ const MainPage = () => {
       </MainContainer>
 
       <GuideContainer>
+        <GuideArrow src={ArrowImage} alt="guide arrow" />
         <GuideText>
           매일 배달되는 질문을 통해 <br />
           나만의 일기를 기록하고 관리하세요. <br />
