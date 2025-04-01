@@ -37,6 +37,7 @@ export const DownloadButton = styled.button`
   font-family: 'Pretendard';
   font-weight: var(--weight-medium);
   font-size: 0.75rem;
+  color: #000000;
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
