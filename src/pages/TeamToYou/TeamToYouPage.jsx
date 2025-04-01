@@ -1,9 +1,11 @@
-import Header from '../../components/Header/Header';
 import {
   Container,
   TitleWrapper,
   TeamTitle,
   Underline,
+} from '../../styles/sharedStyles';
+import Header from '../../components/Header/Header';
+import {
   Section,
   SectionTitle,
   MemberGrid,
