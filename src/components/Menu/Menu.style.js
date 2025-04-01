@@ -18,7 +18,7 @@ export const MenuContent = styled.div`
   gap: 1.563rem;
   padding-left: 0.938rem;
   align-self: center;
-  font-family: 'Pretendared';
+  font-family: 'Pretendard';
   font-weight: var(--weight-light);
   font-size: 0.938rem;
   cursor: pointer;
