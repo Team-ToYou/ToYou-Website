@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import logo from '@/assets/logo.svg';
 import listIcon from '@/assets/list.svg';
@@ -17,7 +17,10 @@ const Header = () => {
   const location = useLocation();
   const nav = useNavigate();
 
-  const toggleOverlay = () => {
+  const menuRef = useRef(null);
+
+  const toggleOverlay = (e) => {
+    e.stopPropagation(); // 이벤트 버블링 방지
     setIsOpen(!isOpen);
   };
 
@@ -29,12 +32,26 @@ const Header = () => {
     }
   };
 
+  const handleClickOutside = (e) => {
+    // 메뉴 토글 버튼 클릭은 무시
+    const toggleButton = document.querySelector('.btn-group IconButton');
+    if (toggleButton && toggleButton.contains(e.target)) {
+      return;
+    }
+
+    if (menuRef.current && !menuRef.current.contains(e.target)) {
+      setIsOpen(false);
+    }
+  };
+
   useEffect(() => {
     setIsOpen(false);
     window.addEventListener('scroll', handleScroll);
+    document.addEventListener('click', handleClickOutside);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleClickOutside); // 이벤트 리스너 제거
     };
   }, []);
 
@@ -69,7 +86,7 @@ const Header = () => {
           </IconButton>
         </div>
       </HeaderContainer>
-      <Menu open={isOpen} onClose={() => setIsOpen(false)} />
+      <Menu ref={menuRef} open={isOpen} onClose={() => setIsOpen(false)} />
       <HeaderDivider isOpen={isOpen} />
     </>
   );

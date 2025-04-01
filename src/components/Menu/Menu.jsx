@@ -1,14 +1,29 @@
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { OverlayMenu, MenuContent } from './Menu.style';
 
-const Menu = ({ open }) => {
+const Menu = React.forwardRef(({ open, onClose }, ref) => {
   const nav = useNavigate();
 
   return (
-    <OverlayMenu open={open}>
+    <OverlayMenu open={open} ref={ref}>
       <MenuContent>
-        <p onClick={() => nav('/TeamToYou')}>Team ToYou</p>
-        <p onClick={() => nav('/History')}>History</p>
+        <p
+          onClick={() => {
+            nav('/TeamToYou');
+            if (onClose) onClose();
+          }}
+        >
+          Team ToYou
+        </p>
+        <p
+          onClick={() => {
+            nav('/History');
+            if (onClose) onClose();
+          }}
+        >
+          History
+        </p>
         <p onClick={() => window.open('http://pf.kakao.com/_xiuPIn/chat')}>
           고객센터
         </p>
@@ -21,6 +36,6 @@ const Menu = ({ open }) => {
       </MenuContent>
     </OverlayMenu>
   );
-};
+});
 
 export default Menu;
