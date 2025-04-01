@@ -7,6 +7,8 @@ export const barContainer = css`
 `;
 
 export const Container = styled.div`
+  width: 393px;
+  min-height: 53.25rem;
   position: relative;
 `;
 
