@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import useMobileOS from '@/hooks/useMobileOS';
+import handleAppDownload from '@/utils/handleAppDownload';
 import logo from '@/assets/logo.svg';
 import listIcon from '@/assets/list.svg';
 import closeIcon from '@/assets/close.svg';
@@ -59,6 +61,12 @@ const Header = () => {
     setIsOpen(false);
   }, [location.pathname]);
 
+  const os = useMobileOS();
+
+  const handleDownload = () => {
+    handleAppDownload(os);
+  };
+
   return (
     <>
       <HeaderContainer isScrolled={isScrolled} isOpen={isOpen}>
@@ -69,15 +77,7 @@ const Header = () => {
           alt="toyou logo"
         />
         <div className="btn-group">
-          <DownloadButton
-            onClick={() =>
-              window.open(
-                'https://play.google.com/store/apps/details?id=com.toyou.toyouandroid'
-              )
-            }
-          >
-            앱 다운로드
-          </DownloadButton>
+          <DownloadButton onClick={handleDownload}>앱 다운로드</DownloadButton>
           <IconButton onClick={toggleOverlay}>
             <img
               src={isOpen ? closeIcon : listIcon}

@@ -1,3 +1,12 @@
+import Header from '@/components/Header/Header';
+import useMobileOS from '@/hooks/useMobileOS';
+import handleAppDownload from '@/utils/handleAppDownload';
+import MainImage from '@/assets/main.svg';
+import MainImage2 from '@/assets/main2.svg';
+import ArrowImage from '@/assets/arrow.svg';
+import Step1Image from '@/assets/step1.svg';
+import Step2Image from '@/assets/step2.svg';
+import Step3Image from '@/assets/step3.svg';
 import {
   MainContainer,
   CTASection,
@@ -14,15 +23,14 @@ import {
   StepDescription,
   StepImage,
 } from './Main.style';
-import Header from '../../components/Header/Header';
-import MainImage from '@/assets/main.svg';
-import MainImage2 from '@/assets/main2.svg';
-import ArrowImage from '@/assets/arrow.svg';
-import Step1Image from '@/assets/step1.svg';
-import Step2Image from '@/assets/step2.svg';
-import Step3Image from '@/assets/step3.svg';
 
 const MainPage = () => {
+  const os = useMobileOS();
+
+  const handleDownload = () => {
+    handleAppDownload(os);
+  };
+
   return (
     <>
       <MainContainer>
@@ -32,15 +40,7 @@ const MainPage = () => {
             <br />
             작성하러 가기
           </p>
-          <DownloadButton
-            onClick={() =>
-              window.open(
-                'https://play.google.com/store/apps/details?id=com.toyou.toyouandroid'
-              )
-            }
-          >
-            앱 다운로드
-          </DownloadButton>
+          <DownloadButton onClick={handleDownload}>앱 다운로드</DownloadButton>
         </CTASection>
         <Header />
         <MainImageWrapper src={MainImage} alt="main image" />
