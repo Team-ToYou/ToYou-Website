@@ -16,7 +16,7 @@ export const SectionTitle = styled.h2`
 export const MemberGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 8ch;
+  column-gap: 7ch;
   row-gap: 2.875rem;
   margin-top: 2rem;
 `;

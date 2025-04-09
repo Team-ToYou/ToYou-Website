@@ -29,18 +29,14 @@ const TeamToYouPage = () => {
         <SectionTitle color="#EB8B8B">Active Member</SectionTitle>
         <MemberGrid>
           <div>
-            <MemberRole>Project Manager</MemberRole>
-            <MemberList>유태연</MemberList>
+            <MemberRole>Android Developer</MemberRole>
+            <MemberList>정승원</MemberList>
+            <MemberList>차현정</MemberList>
           </div>
           <div>
             <MemberRole>iOS Developer</MemberRole>
             <MemberList>김미주</MemberList>
             <MemberList>이승준</MemberList>
-          </div>
-          <div>
-            <MemberRole>Android Developer</MemberRole>
-            <MemberList>정승원</MemberList>
-            <MemberList>차현정</MemberList>
           </div>
           <div>
             <MemberRole>BE Developer</MemberRole>
@@ -52,6 +48,10 @@ const TeamToYouPage = () => {
       <Section top={500}>
         <SectionTitle color="#A6A6A6">Non-Active Member</SectionTitle>
         <MemberGrid>
+          <div>
+            <MemberRole>Product Manager</MemberRole>
+            <MemberList>유태연</MemberList>
+          </div>
           <div>
             <MemberRole>Designer</MemberRole>
             <MemberList>송혜음</MemberList>
