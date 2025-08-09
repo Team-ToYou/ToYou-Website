@@ -4,7 +4,7 @@ const IOS_LINK = 'https://apps.apple.com/kr/app/%ED%88%AC%EC%9C%A0-%EC%A7%88%EB%
 
 const handleAppDownload = (os) => {
   if (os === 'Android') {
-    window.open(ANDROID_LINK);
+    window.open(IOS_LINK);
   } else if (os === 'iOS') {
     window.location.href = IOS_LINK;
   } else {
